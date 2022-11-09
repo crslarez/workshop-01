@@ -1,5 +1,8 @@
 *  {
     color: white;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -7,41 +10,31 @@ body {
     margin: auto;
     font-family: 'Overpass', sans-serif;
     margin-top: 50px;
+    font-size: 15px;
 }
 
 .container {
     background-color:  hsl(213, 19%, 18%);
     padding: 50px;
     border-radius: 30px;
-    width: 70%;
+    width: 95%;
     margin: auto;
 }
 
 .button {
     border-radius: 20px;
-    color: hsl(25, 97%, 53%);
     font-weight: 700;
     width: 100%;
     padding: 10px;
-    margin-top: 35px;
-    display: block;
-}
-
-.options {
-    background-color:  hsl(216, 12%, 8%);;
-    border-radius: 100%;
-    padding: 13px 18px;
-    cursor: pointer;
-}
-
-.options:hover {
-    background-color:  hsl(216, 12%, 54%);
+    margin-top: 15px;
+    border: none;
 }
 
 #form {
-    text-align: center;
-    width: 100%;
-    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .start {
@@ -50,23 +43,41 @@ body {
     border-radius: 50%;
 }
 
-p {
-    font-size: 15px;
+.orange { color: hsl(25, 97%, 53%) }
+
+input[type=radio] {
+    width: 0;
 }
 
-.orange {
-    text-decoration: none;
-    color: hsl(25, 97%, 53%);
+input[type=radio] + span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color:  hsl(216, 12%, 8%);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+input[type=radio] + span:hover {
+    background-color:  hsl(216, 12%, 54%);
+    transform: translateY(-5px);
+    box-shadow: 0 2px 5px hsla(217, 13%, 64%, 0.829);
+}
+
+input[type=radio]:checked + span { 
+    background-color:  hsl(25, 97%, 53%);
+}
 
 @media (min-width: 800px) {
     .container {
-        width: 18%;
+        width: 30%;
     }
 
     #form {
         width: 100%;
         text-align: center;
     }
-  }
+}
