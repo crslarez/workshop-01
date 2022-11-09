@@ -71,6 +71,16 @@ input[type=radio]:checked + span {
     background-color:  hsl(25, 97%, 53%);
 }
 
+.img {
+    display: flex;
+    margin: auto;
+}
+
+.description {
+    margin-top: 20px;
+    text-align: center;
+}
+
 @media (min-width: 800px) {
     .container {
         width: 30%;
